@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="app.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/33938235e4.js"
+      crossorigin="anonymous"
+    ></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+        .hello {
+          color: #000;
+          background-color: #19e3fa;
+        }
+        .btn {
+          padding: 5px;
+        }
+        .test {
+          border-color: red;
+          border-style: solid;
+          border-width: 3px;
+        }
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            container: {
+              center: true,
+            },
+            colors: {
+              clifford: "#da373d",
+            },
+            screens: {
+              xs: "480px",
+            },
+            minWidth: {
+              px200: "200px",
+            },
+          },
+        },
+      };
+    </script>
+
+    <title>Expense Tracker</title>
+  </head>
+  <body class="bg-teal-100">
+    <!-- page title -->
+    <p class="text-4xl flex justify-center m-5 md:text-5xl">Expense Tracker</p>
+    <!-- main content -->
+    <main class="flex justify-center">
+      <div id="sample" class="w-full md:w-1/3">
+        <!-- input name -->
+        <div class="flex justify-center my-1 p-1 min-w-full md:w-1/3">
+          <p class="mx-2 font-medium">Name:</p>
+          <input
+            id="inputName"
+            type="text"
+            placeholder="Where was the expense made?"
+            class="rounded px-2 focus:outline-none w-full text-lg"
+            required
+            style="text-transform: capitalize"
+          />
+        </div>
+        <!-- date and amount -->
+        <div class="flex">
+          <!-- input date  -->
+          <div class="w-full mt-3">
+            <div class="flex justify-center my-1 py-1 min-w-full md:w-1/3">
+              <p class="font-medium p-1">Date:</p>
+              <input
+                id="inputDate"
+                type="date"
+                name="expenseDate"
+                class="rounded px-2 focus:outline-none w-full text-sm"
+                required
+              />
+            </div>
+          </div>
+          <!-- input amount -->
+          <div class="w-1/2 px-1">
+            <p>Amount:</p>
+            <input
+              id="inputAmount"
+              type="number"
+              class="focus:outline-none font-medium text-sm py-1 w-full"
+              required
+            />
+          </div>
+        </div>
+        <!-- Add Expense Button -->
+        <div class="flex justify-center">
+          <button id="addExpense" class="btn bg-emerald-500 m-1 rounded">
+            Add Expense
+          </button>
+        </div>
+        <!-- table data -->
+        <section>
+          <table
+            id="expenseTable"
+            class="mt-5 w-full bg-sky-300 rounded border-solid border-2 border-blue-600 flex-auto"
+          >
+            <tr>
+              <th class="border-solid border-2 border-blue-600">Name</th>
+              <th class="border-solid border-2 border-blue-600">Date</th>
+              <th class="border-solid border-2 border-blue-600">Amount</th>
+              <th class="border-solid border-2 border-blue-600">Remarks</th>
+            </tr>
+
+            <!-- <tr class="bg-sky-200">
+              <td class="border-solid border-2 border-blue-600">Cedrick</td>
+              <td class="border-solid border-2 border-blue-600">07/25/2022</td>
+              <td class="border-solid border-2 border-blue-600">Php1.8M</td>
+              <td
+                class="border-solid border-0 border-blue-600 flex justify-center"
+              >
+                <button
+                  class="fa-solid fa-trash-can bg-red-500 px-1 py-2 rounded"
+                ></button>
+              </td>
+            </tr> -->
+
+            <tr id="caution" class="bg-sky-200">
+              <td colspan="4">No expenses added yet!</td>
+            </tr>
+          </table>
+        </section>
+      </div>
+    </main>
+
+    <!-- <p id="hello" class="hello">hello</p> -->
+
+    <!-- 
+    <form action="" class="flex justify-center mt-3">
+      <label for="ice-cream-choice" class="mx-2">Choose a flavor:</label>
+      <input
+        list="ice-cream-flavors"
+        id="ice-cream-choice"
+        name="ice-cream-choice"
+        class="outline-none px-1"
+      />
+      <datalist id="ice-cream-flavors" class="bg-orange-300">
+        <option value="Chocolate"></option>
+        <option value="Coconut"></option>
+        <option value="Mint"></option>
+        <option value="Strawberry"></option>
+        <option value="Vanilla"></option>
+      </datalist>
+    </form>
+    <footer></footer> -->
+  </body>
+</html>

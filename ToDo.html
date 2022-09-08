@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="app.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/33938235e4.js"
+      crossorigin="anonymous"
+    ></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .hello {
+          color: #000;
+          background-color: #19e3fa;
+        }
+        .btn {
+          padding: 5px;
+          background-color: #89dce8;
+        }
+        .test {
+          border-color: red;
+          border-style: solid;
+          border-width: 3px;
+        }
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            container: {
+              center: true,
+            },
+            colors: {
+              clifford: "#da373d",
+            },
+            screens: {
+              xs: "480px",
+            },
+            minWidth: {
+              px200: "200px",
+            },
+          },
+        },
+      };
+    </script>
+
+    <title>To Do List</title>
+  </head>
+  <body class="bg-teal-100">
+    <h2 class="flex justify-center m-5 text-5xl">To Do List</h2>
+    <div class="flex justify-center" id="container">
+      <input
+        id="inputField"
+        type="text"
+        class="rounded pl-2 focus:outline-cyan-400 focus:bg-cyan-100 hover:bg-cyan-100"
+      />
+      <button
+        id="addTodo"
+        class="bg-teal-200 hover:bg-teal-300 rounded p-1 ml-1 active:bg-teal-400"
+      >
+        add To Do
+      </button>
+    </div>
+    <div class="p-2 m-1 flex justify-center">
+      <div id="todoContainer" class="flex flex-col items-center w-1/2">
+        <!-- <div
+          class="bg-slate-500 md:w-1/2 min-w-px200 text-white rounded flex flex-wrap mt-2 items-center"
+        >
+          <p class="flex flex-1 p-2">
+            Hello Lorem ipsum dolor sit amet consectetur, adipisicing elit.Hello
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.Hello Lorem
+            ipsum dolor sit amet consectetur, adipisicing elit.Hello Lorem ipsum
+            dolor sit amet consectetur, adipisicing elit.Hello Lorem ipsum dolor
+            sit amet consectetur, adipisicing elit.
+          </p>
+          <button
+            class="fa-solid fa-trash-can bg-red-500 px-2 py-3 rounded mr-1"
+          ></button>
+        </div>
+        <div
+          class="bg-slate-500 md:w-1/2 min-w-px200 text-white rounded flex flex-wrap mt-2 items-center"
+        >
+          <p class="flex flex-1 p-2">
+            Hello Lorem ipsum dolor sit amet consectetur, adipisicing elit.Hello
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.Hello Lorem
+            ipsum dolor sit amet consectetur, adipisicing elit.Hello Lorem ipsum
+            dolor sit amet consectetur, adipisicing elit.Hello Lorem ipsum dolor
+            sit amet consectetur, adipisicing elit.
+          </p>
+          <button
+            class="fa-solid fa-trash-can bg-red-500 px-2 py-3 rounded mr-1"
+          ></button>
+        </div> -->
+      </div>
+    </div>
+  </body>
+</html>
