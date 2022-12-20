@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="app.js"></script>
+    <script defer src="/app.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://fonts.googleapis.com/css?family=Poppins"
@@ -54,19 +54,26 @@
 
     <title>To Do List</title>
   </head>
-  <body class="bg-teal-100">
+  <div class="container ">
+
+  </div>
+
+
+
+  <body class="bg-stone-200">
     <h2 class="flex justify-center m-5 text-5xl">To Do List</h2>
-    <div class="flex justify-center" id="container">
+    <div class="flex justify-center w-auto" id="container">
       <input
         id="inputField"
         type="text"
-        class="rounded pl-2 focus:outline-cyan-400 focus:bg-cyan-100 hover:bg-cyan-100"
+        placeholder="What do you have planned?"
+        class="w-1/4 xs: rounded focus:outline-none px-3 capitalize"
       />
       <button
         id="addTodo"
         class="bg-teal-200 hover:bg-teal-300 rounded p-1 ml-1 active:bg-teal-400"
       >
-        add To Do
+        Add
       </button>
     </div>
     <div class="p-2 m-1 flex justify-center">
