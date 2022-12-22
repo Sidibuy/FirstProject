@@ -1,3 +1,4 @@
+//ToDo list
 var addTodo = document.getElementById("addTodo");
 var inputField = document.getElementById("inputField");
 var todoContainer = document.getElementById("todoContainer");
@@ -19,7 +20,7 @@ addTodo?.addEventListener("click", function () {
   <button class="fa-solid fa-trash-can bg-red-500 px-2 py-3 rounded m-1"></button>`;
     todoContainer.appendChild(paragraph);
     inputField.value = "";
-    
+
     paragraph.addEventListener("click", function () {
       paragraph.style.textDecoration = "line-through";
     });
@@ -32,7 +33,6 @@ addTodo?.addEventListener("click", function () {
 });
 
 //Expense Tracker
-
 var inputName = document.getElementById("inputName");
 var inputDate = document.getElementById("inputDate");
 var inputAmount = document.getElementById("inputAmount");
