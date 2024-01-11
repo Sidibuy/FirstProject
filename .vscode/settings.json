@@ -1,12 +1,8 @@
 {
-  "cSpell.words": [
-    "Chel",
-    "Kenn",
-    "tailwindcss"
-  ],
+  "cSpell.words": ["Chel", "Kenn", "tailwindcss"],
   "launch": {
-  
     "configurations": [],
     "compounds": []
-  }
+  },
+  "liveServer.settings.port": 5501
 }
