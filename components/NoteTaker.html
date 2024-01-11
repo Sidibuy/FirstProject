@@ -96,36 +96,11 @@
         <!-- notes -->
         <div id="notes" class="grid md:grid-cols-2 w-full"></div>
       </section>
+      
+      </div>
     </div>
     <script>
-      const noteTitleInput = document.getElementById("noteTitleInput");
-      const noteInput = document.getElementById("noteInput");
-      const addNoteBtn = document.getElementById("addNoteBtn");
-      const noteTitle = document.getElementById("noteTitle");
-      const notes = document.getElementById("notes");
-      const note = document.getElementById("note");
-      const noteDetailBtn = document.getElementById("noteDetailBtn");
-      const form = document.getElementById("form");
-
-      const addNote = form.addEventListener("submit", (e) => {
-        var title = noteTitleInput.value;
-        var note = noteInput.value;
-        e.preventDefault();
-        console.log("test");
-        notes.innerHTML += `
-        <div class="text-left space-y-3 p-2 m-2 border-2 border-black rounded-md">
-          <p id="noteTitle" class="font-bold capitalize">${title}</p>
-          <p id="note" class="pl-5 ">${note}</p>
-          <button 
-            id="noteDetailBtn"
-            class="p-2 rounded-md bg-blue-600 hover:bg-[#0C3EED] font-medium text-white hover:cursor-pointer">
-            View Detail
-          </button>
-        </div>
-        `;
-        noteTitleInput.value = "";
-        noteInput.value = "";
-      });
+     
     </script>
   </body>
 </html>
