@@ -53,54 +53,48 @@
     </script>
     <title>To Do List</title>
   </head>
-  <div class="container"></div>
-  <body class="bg-teal-100">
-    <h2 class="flex justify-center m-5 text-5xl">TODO List</h2>
-    <div class="flex justify-center w-auto" id="container">
-      <input
-        id="inputField"
-        type="text"
-        placeholder="What do you have planned?"
-        class="w-1/4 xs: rounded focus:outline-none px-3 capitalize"
-      />
-      <button
-        id="addTodo"
-        class="bg-blue-600 hover:bg-blue-700 text-white rounded p-1 ml-1"
-      >
-        Add
-      </button>
-    </div>
-    <div class="p-2 m-1 flex justify-center">
-      <div id="todoContainer" class="flex flex-col items-center w-1/2">
-        <!-- <div
-          class="bg-slate-500 md:w-1/2 min-w-px200 text-white rounded flex flex-wrap mt-2 items-center"
-        >
-          <p class="flex flex-1 p-2">
-            Hello Lorem ipsum dolor sit amet consectetur, adipisicing elit.Hello
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.Hello Lorem
-            ipsum dolor sit amet consectetur, adipisicing elit.Hello Lorem ipsum
-            dolor sit amet consectetur, adipisicing elit.Hello Lorem ipsum dolor
-            sit amet consectetur, adipisicing elit.
-          </p>
+  <body>
+    <div
+      class="bg-teal-100 flex justify-center items-center h-screen font-[poppins]"
+    >
+      <main class="bg-white md:h-5/6 max-w-xl h-full w-full md:rounded-md">
+        <h2 class="text-4xl mt-10 flex justify-center font-semibold">
+          Todo list
+        </h2>
+        <div class="my-4 flex justify-center space-x-5">
+          <!-- input button-->
+          <input
+            type="text"
+            id="input"
+            placeholder="What do you have planned?"
+            class="bg-slate-100 hover:bg-slate-200 w-3/4 outline-none pl-2 py-1 border-2 rounded-md capitalize"
+          />
+          <!-- add button -->
           <button
-            class="fa-solid fa-trash-can bg-red-500 px-2 py-3 rounded mr-1"
-          ></button>
+            id="addBtn"
+            class="bg-blue-600 text-white p-1 rounded hover:bg-blue-700"
+          >
+            Add
+          </button>
         </div>
-        <div
-          class="bg-slate-500 md:w-1/2 min-w-px200 text-white rounded flex flex-wrap mt-2 items-center"
-        >
-          <p class="flex flex-1 p-2">
-            Hello Lorem ipsum dolor sit amet consectetur, adipisicing elit.Hello
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.Hello Lorem
-            ipsum dolor sit amet consectetur, adipisicing elit.Hello Lorem ipsum
-            dolor sit amet consectetur, adipisicing elit.Hello Lorem ipsum dolor
-            sit amet consectetur, adipisicing elit.
-          </p>
-          <button
-            class="fa-solid fa-trash-can bg-red-500 px-2 py-3 rounded mr-1"
-          ></button>
-        </div> -->
-      </div>
+        <section id="=todoContainer">
+          <label class="flex justify-center text-lg mt-5 bg-">Pending Task</label>
+          <!-- pending list task -->
+          <div id="pendingTask">
+            <div
+              id="listEl"
+              class="bg-slate-200 mx-3 my-1 p-2 flex-col group capitalize italic text-center rounded"
+            >
+              Stay positive. work hard.make it happen.
+            </div>
+          </div>
+          <!-- completed task -->
+          <label class="flex justify-center text-lg mt-10"
+            >Completed Task
+          </label>
+          <div id="completedTask"></div>
+        </section>
+      </main>
     </div>
   </body>
 </html>
