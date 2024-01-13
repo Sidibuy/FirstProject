@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="/app.js"></script>
+    <script defer src="../scripts/NoteTaker.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://fonts.googleapis.com/css?family=Poppins"
@@ -14,53 +14,11 @@
       src="https://kit.fontawesome.com/33938235e4.js"
       crossorigin="anonymous"
     ></script>
-    <!-- <style type="text/tailwindcss">
-      @layer utilities {
-        input[type="number"]::-webkit-inner-spin-button,
-        input[type="number"]::-webkit-outer-spin-button {
-          -webkit-appearance: none;
-          margin: 0;
-        }
-        .hello {
-          color: #000;
-          background-color: #19e3fa;
-        }
-        .btn {
-          padding: 5px;
-        }
-        .test {
-          border-color: red;
-          border-style: solid;
-          border-width: 3px;
-        }
-      }
-    </style>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            container: {
-              center: true,
-            },
-            colors: {
-              clifford: "#da373d",
-            },
-            screens: {
-              xs: "480px",
-            },
-            minWidth: {
-              px200: "200px",
-            },
-          },
-        },
-      };
-    </script> -->
     <title>Note Taker</title>
   </head>
   <body class="bg-teal-100">
     <div class="w-full text-center flex flex-col items-center">
       <div class="text-5xl mx-10 my-5">Note Taker</div>
-
       <div class="text-blue-700 text-lg font-semibold mb-5">
         Add A New Note:
       </div>
@@ -91,42 +49,12 @@
           class="py-2 mt-2 w-full rounded-md bg-blue-600 hover:bg-[#0C3EED] font-medium text-white hover:cursor-pointer"
         />
       </form>
-
       <section class="flex items-center w-full lg:w-1/2">
         <!-- notes -->
         <div id="notes" class="grid md:grid-cols-2 w-full"></div>
       </section>
+      </div>
     </div>
-    <script>
-      const noteTitleInput = document.getElementById("noteTitleInput");
-      const noteInput = document.getElementById("noteInput");
-      const addNoteBtn = document.getElementById("addNoteBtn");
-      const noteTitle = document.getElementById("noteTitle");
-      const notes = document.getElementById("notes");
-      const note = document.getElementById("note");
-      const noteDetailBtn = document.getElementById("noteDetailBtn");
-      const form = document.getElementById("form");
-
-      const addNote = form.addEventListener("submit", (e) => {
-        var title = noteTitleInput.value;
-        var note = noteInput.value;
-        e.preventDefault();
-        console.log("test");
-        notes.innerHTML += `
-        <div class="text-left space-y-3 p-2 m-2 border-2 border-black rounded-md">
-          <p id="noteTitle" class="font-bold capitalize">${title}</p>
-          <p id="note" class="pl-5 ">${note}</p>
-          <button 
-            id="noteDetailBtn"
-            class="p-2 rounded-md bg-blue-600 hover:bg-[#0C3EED] font-medium text-white hover:cursor-pointer">
-            View Detail
-          </button>
-        </div>
-        `;
-        noteTitleInput.value = "";
-        noteInput.value = "";
-      });
-    </script>
   </body>
 </html>
 
