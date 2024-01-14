@@ -20,5 +20,28 @@
   <body class="bg-teal-100 text-center">
     <p class="text-5xl p-10">Memory Game</p>
     <p>test</p>
+    <div class="tiles"></div>
   </body>
+  <style>
+    body {
+      background: #333333;
+      margin: 0;
+    }
+
+    .tiles {
+      margin: 48px auto;
+      width: max-content;
+      display: grid;
+      grid-template-columns: repeat(4, 100px);
+      gap: 16px;
+      box-sizing: border-box;
+    }
+
+    .tile {
+      height: 100px;
+      background: #111111;
+      border: 5px solid #444444;
+      cursor: pointer;
+    }
+  </style>
 </html>
